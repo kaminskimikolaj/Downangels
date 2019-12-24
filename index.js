@@ -10,7 +10,7 @@ let spawncount = input.spawncount
 
 function length() {
 	return new Promise(function(resolve){
-		exec(`curl -I ${input.href} -s | grep content-length: -i`, (err, stdout, stderr) => {
+		exec(`curl -I "${input.href}" -s | grep content-length: -i`, (err, stdout, stderr) => {
 
 		  	if (err) {
 		    	console.log("node couldn't execute the command")
